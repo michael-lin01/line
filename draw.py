@@ -57,11 +57,11 @@ def draw_line(x0, y0, x1, y1, screen, color):
                 d += A
         # octants 3 and 7
         elif slope < -1:
-            d = A + 2*B
+            d = A - 2*B
             A,B = 2*A, 2*B
             while y0 >= y1:
                 plot(screen, color, x0, y0)
-                if d < 0:
+                if d > 0:
                     x0 += 1
                     d += A
                 y0 -= 1
